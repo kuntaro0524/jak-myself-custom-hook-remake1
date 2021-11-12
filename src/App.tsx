@@ -1,10 +1,19 @@
 import "./styles.css";
 
+import { UserCard } from "./components/UserCard";
+import { UserProfile } from "./types/userProfile";
+
+const user: UserProfile = {
+  id: 10,
+  name: "Kunio Hirata",
+  email: "kuntaro@gmail",
+  address: "Kouto 2-10-36"
+};
+
 export default function App() {
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      <UserCard user={user} />
     </div>
   );
 }
