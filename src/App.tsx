@@ -36,7 +36,9 @@ export default function App() {
   return (
     <div className="App">
       <button onClick={onClickFetchUser}> data acquisition </button>
-      {console.log(userProfiles)}
+      {userProfiles.map((user) => (
+        <UserCard key={user.id} user={user} />
+      ))}
       <UserCard user={user} />
     </div>
   );
